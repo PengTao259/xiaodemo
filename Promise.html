@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function  setTime(time) {
+    //   return new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //       res()
+    //     },time)
+    //   })
+    // }
+
+    // setTime(1000).then(()=>{
+    //   console.log('1s执行了');
+    //   return setTime(3000)
+    // })
+    // .then(()=>{
+    //   console.log('3s执行了');
+    //   return setTime(5000)
+    // })
+    // .then(()=>{
+    //   console.log('5s执行了');
+    // })
+
+    // function XHRrequest(url) {
+    //   return new Promise((res, rej) => {
+    //     // 创建异步对象
+    //     var oReq = new XMLHttpRequest();
+
+    //     // 添加请求回调函数
+    //     // 请求成功，就会立即执行该回调函数
+    //     oReq.addEventListener("load", function () {
+
+    //       // 获取输出响应结果
+    //       // callBack(this.responseText)
+    //       // 如果没有数据
+    //       // res();
+    //       // 如果有数据
+    //       res(this.responseText)
+    //     });
+
+    //     oReq.addEventListener("error", function (err) {
+    //       // 失败rej
+    //       rej(err)
+    //     })
+
+    //     // 设置请求方法和请求路径
+    //     oReq.open("GET", url);
+
+    //     // 发出请求
+    //     oReq.send();
+    //   })
+    // }
+
+    // XHRrequest('https://jsonplaceholder.typicode.com/abc').then(data => {
+    //   console.log(data);
+    // }, err => {
+    //   console.log(err);
+
+    // })
+
+
+      // 封装一个Promise请求
+      // function XHRrequest(url) {
+      //   return new Promise((res,rej)=>{
+      //       // 创建异步对象
+      //       var oReq = new XMLHttpRequest();
+            
+      //       // 添加请求回调函数
+      //       // 请求成功，就会立即执行该回调函数
+      //       oReq.addEventListener("load", function () {
+      //       // 获取输出响应结果
+      //         res(this.responseText)
+      //       });
+      //       // 请求失败的回调
+      //       oReq.addEventListener("error",function () {
+      //         rej()
+      //       })
+            
+      //       // 设置请求方法和请求路径
+      //       oReq.open("GET",url);
+            
+      //       // 发出请求
+      //       oReq.send();
+      //   });
+      // }
+      
+
+      
+      // async function main(){
+      //   const data = await XHRrequest('https://jsonplaceholder.typicode.com/posts')
+      //   console.log(data);
+      // }
+      // main()
+
+        function getNum(time){
+          return new Promise(res=>{
+            setTimeout(() => {
+              res()
+            }, time);
+          })
+        }
+        async function main() {
+          await getNum(1000)
+          console.log(1);
+          await getNum(3000)
+          console.log(2);
+          await getNum(2000)
+          console.log(3);
+          
+          
+        }
+        main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

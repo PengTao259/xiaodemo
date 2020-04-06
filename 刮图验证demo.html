@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刮图效果demo</title>
+    <style>
+        .big{
+            position: relative;
+        }
+        .mycan{
+            position: absolute;
+            z-index: 1;
+        }
+        .picBox {
+            position: absolute;
+            height: 359px;
+            width: 280px;
+            border: 1px solid #000;
+        }
+        img{
+            max-width: 80px;
+            max-height: 60px;
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="big">
+    <canvas id="mycan" class="mycan" width="280" height="359">canvas标签支持IE9以上浏览器</canvas>
+    <div class="picBox">
+        <div class="pic1">
+            <img src="img/gpic3.jpg">
+        </div>
+        <img src="./img/gpic2.jpg">
+        <img src="./img/gpic.jpg">
+    </div>
+</div>
+
+<script>
+    {
+    var cvs = document.getElementById('mycan');
+    var ctx = cvs.getContext('2d');
+
+    ctx.fillStyle = "#ccc";//背景颜色
+    ctx.rect(0,0,280,359);
+    ctx.fill();//填充
+    ctx.fillStyle="#000";//字体颜色为#000
+    ctx.font ="40px Arial";//字体和字体大小
+    ctx.fillText("点击刮开验证",60,200,130);
+
+    ctx.globalCompositeOperation = 'destination-out';//在源图像外显示目标图像。只有源图像外的目标图像部分会被显示，源图像是透明的。
+    ctx.lineWidth = 80;  //画笔粗细
+    ctx.lineJoin = "round";//线的接头为圆型
+    ctx.lineCap = "round";//线的两端为圆型
+    function move(){
+        ctx.lineTo(event.offsetX,event.offsetY);
+        ctx.stroke();
+    }
+    mouseHander();
+    // 鼠标事件
+    function mouseHander() {  
+        //鼠标按下
+        cvs.addEventListener("mousedown",function () {
+            ctx.beginPath();
+            ctx.moveTo(event.offsetX,event.offsetY);
+            cvs.addEventListener("mousemove",move)
+        });
+        // 鼠标移动
+        cvs.addEventListener("mouseleave",function () {
+            cvs.removeEventListener("mousemove",move);
+        });
+        // 鼠标离开
+        cvs.addEventListener("mouseup",function () {
+            cvs.removeEventListener("mousemove",move);
+        });
+    }
+
+}
+</script>
+</body>
+</html>
