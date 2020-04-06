@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Computer(color, weight, logo, size) {
+      this.color = color
+      this.weight = weight
+      this.logo = logo
+      this.size = size
+      this.do = function (dowhat) {
+        console.log(dowhat);
+      }
+    }
+    const computer = new Computer('red', 50, '霍普', 10000);
+    console.log(computer.color);
+    computer.do('听歌')
+    computer.do('打游戏')
+    computer.do('敲代码')
+
+  </script>
+</body>
+
+</html>

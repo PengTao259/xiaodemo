@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #e15671;
+    }
+
+    .red {
+      background: red;
+    }
+
+    .width {
+      width: 200px;
+    }
+
+    .height {
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+
+  </div>
+</body>
+<script>
+  var oBox = document.querySelector('.box');
+  var list = oBox.classList;
+  console.log(list.length);
+  document.onclick = function () {
+    list.add("red", "width");
+    list.toggle("height");
+    console.log(list.length);
+    list.toggle("width", list.length < 4 ? true : false);
+    oBox.innerHTML = list.item(2);
+    console.log(list.contains("width"))
+  }
+</script>
+
+</html>

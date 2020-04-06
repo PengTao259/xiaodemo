@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  /*  XS 手机屏幕 */
+  @media screen and (min-width: 0px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  /* SM 平板屏幕尺寸 */
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+
+    .container div {
+      float: left;
+    }
+
+    .left {
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .right {
+      width: 50%;
+      box-sizing: border-box;
+
+    }
+  }
+
+  /* md 小的PC */
+  @media screen and (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+
+    .container div {
+      float: left;
+    }
+
+    .left {
+      width: 30%;
+      box-sizing: border-box;
+    }
+
+    .right {
+      width: 70%;
+      box-sizing: border-box;
+
+    }
+  }
+
+  /* lg 大桌面显示器 无穷大~ */
+  @media screen and (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+
+    .container div {
+      float: left;
+    }
+
+    .left {
+      width: 10%;
+      box-sizing: border-box;
+    }
+
+    .right {
+      width: 90%;
+      box-sizing: border-box;
+
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    height: 500px;
+    background: pink;
+  }
+
+  .container div {
+    height: 300px;
+    border: 1px solid #000;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="left">1</div>
+    <div class="right">2</div>
+  </div>
+</body>
+
+</html>

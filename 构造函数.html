@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //  构造函数
+    function Star(uname, age, sex) {
+      this.name = uname
+      this.age = age
+      this.sex = sex
+      this.sing = function (sang) {
+        console.log(sang);
+      }
+    }
+    var ldh = new Star('刘德华', 8, '男')
+    console.log(ldh);
+    console.log(ldh.name);
+
+
+    // function Hero(name, type, blood) {
+    //   this.name = name
+    //   this.type = type
+    //   this.blood = blood
+    //   this.attack = function (attackType) {
+    //     console.log(attackType)
+    //   }
+    // }
+    // var lp = new Hero('廉颇', '力量型', 500)
+    // var hy = new Hero('后裔', '射手型', 100)
+    // console.log(lp.name);
+    // lp.attack('攻击方式:' + '近战')
+  </script>
+</body>
+
+</html>

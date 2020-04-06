@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 现有一个字符串组
+    // 求里面最多的一个元素是多少
+     var str = 'ajkashdihfcsdcnsdhckscksdcksdskjbkjdbskdbvdkspdopwepwkksknmncbxzbcjshifhwfjwjkbjkjajjhscvskdcd';
+    //  通过字面量方式创建一个空对象用于接受最后要生成的对象
+    // 以便于后期通过遍历对象来获取里面最多的元素
+     var obj = {};
+    //  通过for循环来遍历这个字符串数组
+     for (let i = 0; i < str.length; i++) {
+      //  声明一个对象用于接受charAt方法返回的数据
+       var chars = str.charAt(i)
+      //  因为i是从0开始遍历  如果能遍历到新的下标（为真）  则在0的基础上++
+       if(obj[chars]){
+        obj[chars]++;
+       }else{
+        //  否则 永远就只有一个
+        obj[chars] = 1;
+       }
+     } 
+    //  输出
+     console.log(obj);
+    //  定义最大值用于接受 
+     var max = 0;
+    //  定义空字符串用于接受
+     var res = '';
+    //  把对象进行遍历
+     for (const key in obj) {
+      //  如果对象的值大于max
+       if(obj[key] > max){
+        // 则把对象的值赋给max
+        max = obj[key]
+        res = key
+       }
+     }
+
+     console.log("最多的字符串是"+res);
+     
+     
+
+  </script>
+
+</body>
+
+</html>

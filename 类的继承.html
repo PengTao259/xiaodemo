@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="button" value="按钮1" id="btn1">
+  <script>
+
+    // 几个注意点
+    // 必须先定义方法再实例化对象
+    // 在类里面调用属性或者方法 一 定要用this
+    // this指向 构造函数里的this指向实例化对象  方法里的this指向调用者
+
+    class Anniu {
+      constructor(val) {
+        this.btn = document.querySelector(val);
+        this.btn.onclick = this.cli;
+      }
+
+      cli() {
+        console.log(this);
+      }
+    }
+
+    const obj = new Anniu("#btn1");
+    obj.cli();
+
+
+
+
+  </script>
+</body>
+
+</html>

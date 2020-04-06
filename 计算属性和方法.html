@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+   
+        <h1>{{message}}</h1>
+        <h1>计算属性</h1>
+        <p>{{ doneCount }}</p>
+        <h1>方法</h1>
+        <p>{{ getDoneCount() }}</p>
+    </div>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World!!!',
+                todos: [
+                    { id: 1, title: '吃饭', done: true },
+                    { id: 2, title: '碎觉', done: false },
+                    { id: 3, title: '碎觉', done: true },
+                    { id: 4, title: '吃饭', done: false },
+                ]
+            },
+            methods: {
+                getDoneCount(){
+                    let count = 0;
+                    for (let i = 0; i < this.todos.length; i++) {
+                        if(this.todos[i].done === true){
+                            count++;
+                        }
+                    }
+                    return count;
+                }
+            },
+            computed: {
+                doneCount(){
+                    let count = 0;
+                    for (let i = 0; i < this.todos.length; i++) {
+                        if(this.todos[i].done === true){
+                            count++;
+                        }
+                    }
+                    return count;
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

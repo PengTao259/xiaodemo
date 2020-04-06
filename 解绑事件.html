@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      height: 100px;
+      width: 100px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+
+  <script>
+    var divs = document.querySelectorAll('div')
+
+    // 传统方法解绑事件 
+    divs[0].onclick = function () {
+      alert('111111111')
+      div[0].onclick = null
+    }
+
+    // 通过事件监听的方法注册的事件解绑
+    divs[1].addEventListener('click', fn)
+    function fn() {
+      alert('2222222222')
+      divs[1].removeEventListener('click', fn)
+    }
+  </script>
+</body>
+
+</html>

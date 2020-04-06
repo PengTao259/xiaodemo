@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+  <script>
+    // =================拆分数组插入元素============================
+    // var arr = ['pink', 'red', 'green', 'blue']
+    // var str = ''
+    // for (let i = 0; i < arr.length; i++) {
+    //   str += arr[i] + '|'
+    // }
+    // console.log(str);
+
+
+    // =================按数值遍历===========================
+    // var arr = []
+    // for (let i = 0; i < 100; i++) {
+    //   arr[i] = i + 1
+    // }
+    // console.log(arr);
+
+    // =============遍历大于50的元素====================
+    // var arr = [45, 56, 25, 15, 36, 98, 87, 55, 64, 81, 19, 38]
+    // var newArr = []
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i] > 50) {
+    //     newArr[newArr.length] = arr[i]
+    //   }
+    // }
+    // newArr.sort()
+    // console.log(newArr)
+
+
+    // ==================反转数组=====================
+    // var arr = ['pink', 'red', 'green', 'blue']
+    // var newArr = []
+    // for (let i = arr.length - 1; i >= 0; i--) {
+    //   newArr[newArr.length] = arr[i]
+    // }
+    // console.log(newArr);
+
+
+    // ==================冒泡排序=======================
+    var arr = [1, 5, 4, 89, 7, 8, 6, 2, 3, 45]
+    var s = 0
+    var s1 = 0
+    for (let i = 0; i < arr.length - 1; i++) {
+      var isSort = true
+      for (let j = 0; j < arr.length - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+          isSort = false
+          arr[j] = arr[j] + arr[j + 1]
+          arr[j + 1] = arr[j] - arr[j + 1]
+          arr[j] = arr[j] - arr[j + 1]
+        }
+        s++
+      }
+      s1++
+      if (isSort) {
+        break
+      }
+    }
+    console.log(arr);
+    console.log(s, s1);
+
+
+
+  </script>
+
+</body>
+
+</html>

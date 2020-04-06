@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <script>
+
+
+    // console.log(typeof {});
+    // object
+    // console.log(typeof [1, 2]);
+    // object
+    // console.log(typeof /\s/);
+    //object
+
+    // console.log(arr instanceof Array); // true
+    // console.log(date instanceof Date); // true
+    // console.log(getNum instanceof Function); // true
+    //注意： instanceof 后面一定要是对象类型，大小写不能写错，该方法试用一些条件选择或分支
+    // var arr = []
+    // console.log(arr.constructor === Array);
+    // var obj = {}
+    // console.log(obj.constructor === Object);
+    // var date = new Date();
+    // console.log(date.constructor === Date);
+    // function fn() { }
+    // console.log(fn.constructor === Function);
+    // var str = ''
+    // console.log(str.constructor === String);
+    // var num = 123
+    // console.log(num.constructor === Number);
+    // var dis = false
+    // console.log(dis.constructor === Boolean);
+    // var haha = undefined
+    // console.log(haha.constructor === undefined);
+    // var haha = []
+    // var obj = {}
+    // var newObj = {
+    //   a: 1,
+    //   b: 2,
+    //   c: {
+    //     d: 5
+    //   }
+    // }
+    // var str = ''
+    // console.log($.isArray(haha));
+    // console.log($.isEmptyObject(obj));
+    // console.log($.isXMLDoc(newObj));
+
+    // console.log(toString.call(haha));
+    // console.log(toString.call(obj));
+    // console.log(toString.call(newObj));
+    var arr = [1, 2, 3, 4, 5, 1, 2, 3];
+
+    console.log(Math.max.apply(Math, arr));
+    console.log(Math.constructor.prototype);
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

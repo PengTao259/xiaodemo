@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fn() {
+      alert("我们是全局的fn");
+    }
+    function fn2() {
+      alert(fn);
+      fn = 3;
+      return;
+      function fn() {
+        alert("我是fn2里面的");
+      }
+    }
+    fn2(); //function fn(){alert("我是fn2里面的");}
+  </script>
+</body>
+
+</html>

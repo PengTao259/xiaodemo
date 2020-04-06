@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 声明方式
+    // var obj = {
+    //   name: '这是',
+    //   age: 18,
+    //   sex: '男'
+    // }
+    // console.log(obj.name);
+
+
+
+
+    // // 利用new的方式创建对象
+    // var obj = new Object(); //创建一个空的对象
+    // // 对空对象进行赋值操作 
+    // obj.name = '真脏三';
+    // obj.age = 66;
+
+
+
+    // 工厂模式
+    // function createPerson(name, age, family) {
+    //   var o = new Object();
+    //   o.name = name;
+    //   o.age = age;
+    //   o.family = family;
+    //   o.say = function () {
+    //     alert(this.name);
+    //   }
+    //   return o;
+    // }
+
+    // var person1 = createPerson("lisi", 21, ["lida", "lier", "wangwu"]);   //instanceof无法判断它是谁的实例，只能判断他是对象，构造函数都可以判断出
+    // var person2 = createPerson("wangwu", 18, ["lida", "lier", "lisi"]);
+    // console.log(person1 instanceof Object);                           //true
+
+    // 构造函数模式加原型模型
+    // function Person(name, age, family) {
+    //   this.name = name;
+    //   this.age = age;
+    //   this.family = family;
+    // }
+
+    // Person.prototype = {
+    //   constructor: Person,
+    //   // 每个函数都有prototype属性，指向该数原型对象，原型对象都有constructor属性，这是一个指向prototype属性所在函数的指针
+    //   say: function () {
+    //     alert(this.name);
+    //   }
+    // }
+
+    // var person1 = new Person("lisi", 21, ["lida", "lier", "wangwu"]);
+    // console.log(person1);
+    // var person2 = new Person("wangwu", 21, ["lida", "lier", "lisi"]);
+    // console.log(person2);
+
+
+
+
+
+
+    // "use strict"
+
+    var person = {}
+    Object.defineProperty(person, "name", {
+      writable: true,
+      enumerable: false,
+      configurable: false,
+      name: 'woshinibaba'
+    })
+    for (const abc in person) {
+      console.log;
+
+    }
+    // person.name = 'rose'
+
+    // console.log(person.name);
+
+
+
+    // console.log(person);
+    // delete person.name
+
+    // console.log(person.name);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

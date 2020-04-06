@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid #c0c0c0;
+      width: 500px;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    th {
+      background-color: #09c;
+      font: bold 16px "微软雅黑";
+      color: #fff;
+      height: 24px;
+    }
+
+    td {
+      border: 1px solid #d0d0d0;
+      color: #404060;
+      padding: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <input type="checkbox" name="" id="checkAll" />全选/全不选
+        </th>
+        <th>菜名</th>
+        <th>商家</th>
+        <th>价格</th>
+      </tr>
+    </thead>
+    <tbody id="j_tb">
+      <tr>
+        <td>
+          <input type="checkbox" name="check" class="ck" />
+        </td>
+        <td>红烧肉</td>
+        <td>隆江猪脚饭</td>
+        <td>￥200</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="check" class="ck" />
+        </td>
+        <td>香酥排骨</td>
+        <td>隆江猪脚饭</td>
+        <td>￥998</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" name="check" class="ck" />
+        </td>
+        <td>北京烤鸭</td>
+        <td>隆江猪脚饭</td>
+        <td>￥88</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+<script>
+  // 获取元素 
+  var checkAll = document.getElementById('checkAll')
+  var j_tb = document.getElementById('j_tb').getElementsByTagName('input')
+
+  // 给全选框注册事件，当选中的时候所有子选框变为选中状态 
+  checkAll.onclick = function () {
+    for (let i = 0; i < j_tb.length; i++) {
+      j_tb[i].checked = this.checked
+    }
+  }
+
+  // 给子选框每个选框注册事件
+  for (let i = 0; i < j_tb.length; i++) {
+    j_tb[i].onclick = function () {
+      var flag = true
+      for (let i = 0; i < j_tb.length; i++) {
+        if (!j_tb[i].checked) {
+          flag = false
+        }
+      }
+      checkAll.checked = flag
+    }
+  }
+</script>
+
+
+
+</html>

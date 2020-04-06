@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    function randomString(len) {
+      var str = '0123456789';
+      var num = '';
+      for (let i = 0; i < len; i++) {
+        num += str.charAt(Math.floor(Math.random() * str.length))
+      }
+      return num;
+    }
+    var res = randomString(5)
+    console.log(res);
+
+  </script>
+
+</body>
+
+</html>

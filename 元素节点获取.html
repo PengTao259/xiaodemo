@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <ol>
+    <lo>1</lo>
+    <lo>2</lo>
+    <lo>3</lo>
+    <lo>4</lo>
+    <lo>5</lo>
+    <lo>6</lo>
+  </ol>
+  <script>
+    var ol = document.querySelector('ol')
+    // 1、firstChild 第一个子节点 不管是文本节点还是元素节点返回的都是一个
+    // 通常不用  因为获取到的第一个一般是文本节点没有实际意义
+    console.log(ol.firstChild);
+    console.log(ol.lastChild);
+
+    // 2、firstElementChild 返回第一个元素子节点(但存在兼容问题  对很多浏览器不兼容)
+    console.log(ol.firstElementChild);
+    console.log(ol.lastElementChild);
+
+    // console.log(true && 0 && 10 && 'haha' && 1 && null); // null
+    // console.log(5 && 9); // 9
+    // console.log(0 && 10); // 0
+    // console.log(1 && null && 10 && 0 && undefined); // null
+    // console.log(0 && null);
+
+
+    // console.log(true || 10 || 'haha' || 1 || null); // true
+    // console.log(5 || 9); // 5
+    // console.log(0 || 10); // 10
+    // console.log(false || null || 10 || 0 || undefined); //  10
+
+
+
+    // 3、实际开发中  我们一般使用既没有兼容性问题又能返回第一个元素的
+    console.log(ol.children[0]);
+    console.log(ol.children[ol.children.length - 1]);
+
+
+
+  </script>
+</body>
+
+</html>

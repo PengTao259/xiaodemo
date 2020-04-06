@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #cont {
+      height: 50px;
+      width: 300px;
+      line-height: 50px;
+      background-color: pink;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cont"></div>
+  <script type="text/javascript">
+    var tew = document.getElementById('cont')
+    function getTime() {
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = date.getMonth();
+      var day = date.getDate();
+      var hour = date.getHours();
+      var minute = date.getMinutes();
+      var second = date.getSeconds();
+      hour = hour < 10 ? '0' + hour : hour
+      minute = minute < 10 ? '0' + minute : minute
+      second = second < 10 ? '0' + second : second
+
+      var x = "日一二三四五六".charAt(date.getDay());
+      var time = `现在是:${year}年${month}月${day}日 ${hour}:${minute}:${second} 星期${x}`
+      tew.innerHTML = time;
+    }
+    getTime();
+    setInterval(getTime, 1000);
+  </script>
+</body>
+
+</html>

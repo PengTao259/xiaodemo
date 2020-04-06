@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // 1、声明空数组  判断空数组中的值在不在旧数组中，没有则push进去
+    var arr = [11, 21, 2, 11, 15, 16, 15, 12, 21, 11];
+    var res = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (res.indexOf(arr[i]) === -1) {
+        res.push(arr[i])
+      }
+    }
+    console.log(res);
+
+    // function distinct(arr) {
+    //   for (let i = 0, len = arr.length; i < len; i++) {
+    //     for (let j = i + 1; j < len; j++) {
+    //       if (arr[i] == arr[j]) {
+    //         arr.splice(j, 1);
+    //         // splice 会改变数组长度，所以要将数组长度 len 和下标 j 减一
+    //         len--;
+    //         j--;
+    //       }
+    //     }
+    //   }
+    //   return arr;
+    // }
+    // console.log(distinct([1, 5, 6, 8, 9, 5, 4, 3, 6, 4]));
+
+
+
+
+  </script>
+</body>
+
+</html>

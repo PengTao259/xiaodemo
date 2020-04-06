@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    span {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      line-height: 200px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn500">点击我移动三宝到500</button>
+  <button class="btn800">点击我移动三宝到800</button>
+  <span>俺是三宝</span>
+  <script>
+    function animate(obj, target, callback) {
+      console.log(callback);
+
+      clearInterval(obj.timer);   // 避免定时器多次执行
+      obj.timer = setInterval(() => {
+        var step = (target - obj.offsetLeft) / 10;
+        step = step > 0 ? Math.ceil(step) : Math.floor(step);   // 向上取整向下取整分别对应目标正偏移负偏移
+        if (obj.offsetLeft == target) {
+          clearInterval(obj.timer)   // 当行进距离满足目标距离的时候 停止定时器 
+          // 回调函数写到定时器里面
+          if (callback) {
+            callback()
+          }
+        }
+        // 最后把步长和目标距左侧距离相加
+        // 因为offset属于只读属性，所以赋值给style.left 
+        obj.style.left = obj.offsetLeft + step + 'px'
+      }, 15);
+    }
+
+    var span = document.querySelector('span')
+    var btn500 = document.querySelector('.btn500')
+    var btn800 = document.querySelector('.btn800')
+    btn500.addEventListener('click', function () {
+      animate(span, 500, function () {
+        // alert('回调函数执行了')
+        span.style.backgroundColor = 'red'
+      })
+    })
+
+
+    btn800.addEventListener('click', function () {
+      animate(span, 800)
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    request('http://jsonplaceholder.typicode.com/posts', function (data) {
+      console.log(2);
+
+
+    })
+
+    function request(url, cb) {
+      // 创建异步对象
+      var oReq = new XMLHttpRequest();
+
+      // 添加请求回调函数
+      // 请求成功，就会立即执行该回调函数
+      oReq.addEventListener("load", function () {
+
+        // 获取输出响应结果
+        console.log(this.responseText)
+        cb(123)
+      });
+
+      // 设置请求方法和请求路径
+      oReq.open("GET", url);
+
+      // 发出请求
+      oReq.send();
+    }
+  </script>
+</body>
+
+</html>

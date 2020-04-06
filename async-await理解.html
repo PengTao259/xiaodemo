@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script>
+    // async-await原理就是Generator的语法糖
+    // Generator函数语法  里面的语法是分段执行 看到yield就分一段
+    function* hello() {
+      yield 'hello';
+      yield 'world';
+      return 'ending'
+    }
+    var hw = hello();
+    console.log(hw.next()); // hello 
+    console.log(hw.next()); // world
+    console.log(hw.next()); // ending
+
+  </script> -->
+  <script>
+    // 创建异步对象
+    var oReq = new XMLHttpRequest();
+
+    // 添加请求回调函数
+    // 请求成功，就会立即执行该回调函数
+    oReq.addEventListener("load", function () {
+
+      // 获取输出响应结果 
+      console.log(this.responseText)
+    });
+
+    // 设置请求方法和请求路径
+    oReq.open("GET", "http://www.example.org/example.txt");
+
+    // 发出请求
+    oReq.send();
+  </script>
+</body>
+
+</html>

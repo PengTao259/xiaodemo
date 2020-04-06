@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+
+<body>
+  <script>
+    /*
+    gs写猜数字的游戏
+    */
+    var result1 = confirm("欢迎来到猜数字的游戏中");
+    //首先生成一个随机数
+    if (result1) {
+      var num1 = newNum();
+      alert(num1);
+      guess();
+    } else {
+      window.close();
+    }
+
+    function newNum() {
+      return Math.round(Math.random() * 100);
+    }
+    function guess() {
+      var num2 = prompt("请输入0-100之间的数字！", "0");
+
+      if (num1 > num2) {
+        alert("你输入的数字小了");
+        guess();
+      } else if (num1 < num2) {
+        alert("你输入的数字大了");
+        guess();
+      } else {
+        var result = confirm("恭喜您回答正确！是否要继续游戏？");
+        if (result) {
+          guess();
+        } else {
+          window.close();
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>

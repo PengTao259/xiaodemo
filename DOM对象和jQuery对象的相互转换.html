@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <video src="./mov.mp4" muted></video>
+  <script>
+    // 一：DOM对象转化成jQuery对象
+    // 1，我们可以直接通过jQuery直接获取过来  得到的就是jQuery对象
+    // $('video');
+    // 2，可以通过原生js直接获取然后转化成jQuery对象
+    var myvideo = document.querySelector('video');
+    // $(myvideo).play(); jQ里面没有play这个方法
+    // myvideo.paly();
+
+
+    // 二：jQuery对象转化成DOM对象 的两种方法
+    // $('video')[0].play();
+    $('video').get(0).play();
+
+  </script>
+</body>
+
+</html>

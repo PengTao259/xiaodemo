@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      height: 200px;
+      width: 100px;
+      background-color: pink;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div>俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸俺是你爸爸</div>
+  <script>
+    var div = document.querySelector('div')
+    console.log(div.scrollHeight);
+    console.log(div.clientHeight);
+
+    div.addEventListener('scroll', function () {
+      console.log('页面滚动了呢');
+      console.log(parseInt(div.scrollTop));
+
+
+    })
+
+  </script>
+</body>
+
+</html>

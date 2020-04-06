@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #cont {
+      height: 100px;
+      line-height: 100px;
+      width: 300px;
+      background-color: pink;
+      text-align: center;
+      margin: 200px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="cont"></div>
+  <script>
+    var str = document.getElementById('cont')
+    function getDate() {
+      var date = new Date()
+      var year = date.getFullYear()
+      var month = date.getMonth()
+      var day = date.getDate()
+      var hour = date.getHours()
+      var minute = date.getMinutes()
+      var second = date.getSeconds()
+      hour = hour < 10 ? '0' + hour : hour
+      minute = minute < 10 ? '0' + minute : minute
+      second = second < 10 ? '0' + second : second
+      var x = '日一二三四五六'.charAt(date.getDay())
+      var time = `现在是:${year}年${month}月${day}日 ${hour}:${minute}:${second} 星期${x}`
+     
+    str.innerHTML = time
+    }
+    getDate()
+    setInterval(getDate,1000)
+    // new一个实例的时候做了四件事
+    // 在内存中开辟一个新的空间
+    // 将this的指向 指向这个新空间
+    // 执行构造函数里的代码
+    // 返回一个新对象 
+
+  </script>
+</body>
+</html>

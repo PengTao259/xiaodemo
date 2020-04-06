@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>原方法</button>
+  <button>新方法</button>
+
+  <script>
+    var btns = document.querySelectorAll('button')
+
+    btns[0].onclick = function () {
+      alert('原来的添加事件处理函数的方法')
+    }
+
+    btns[0].onclick = function () {
+      alert('原来的添加事件处理函数的方法66666')
+    }
+
+    btns[1].addEventListener('click', function () {
+      alert('通过事件监听来添加事件处理函数')
+    })
+    btns[1].addEventListener('click', function () {
+      alert('通过事件监听来添加事件处理函数23333')
+    })
+
+
+    // 添加事件处理函数的如果多个处理程序只执行最后一个   通过事件监听的方法添加的事件处理函数每个都能执行
+
+  </script>
+</body>
+
+</html>
