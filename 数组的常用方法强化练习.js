@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-
 
 
 
@@ -96,10 +86,10 @@
       
       // concat
       // 拼接数组
-      var arr=[1,2,3,4];
-      var arr2=[11,[12,13]] 
-      var arrCopy = arr.concat(arr2);	
-      console.log(arrCopy); // [1, 2, 3, 4, 11, Array(2)]
+
+      // var arr2=[11,[12,13]] 
+      // var arrCopy = arr.concat(arr2);	
+      // console.log(arrCopy); // [1, 2, 3, 4, 11, Array(2)]
 
 
 
@@ -113,6 +103,36 @@
       // console.log(newArr);
          
 
+      var arr=[1,2,3,4];
+      /**
+       * 举几个数组简单的方法 
+       */
+      // 第一个最简单的push从最后推入一个元素 返回值是数组的长度
+      // console.log(arr.push(6));
+      // console.log(arr);
+      
+      // 第二个简单的方法unshift 从数组的最前面添加一个元素 并返回数组的长度 
+      // console.log(arr.unshift(6));
+      // console.log(arr);
+      
+      // 第三个简单方法pop将数组最后一个元素删除，并返回这个元素值
+      // console.log(arr.pop());
+      // console.log(arr);
+
+      // 第四个简单方法shift 从第一个元素删除并返回这个元素的值 同样不需要加参数
+      // console.log(arr.shift());
+      // console.log(arr);
+
+      // 第五个简单的方法slice 截取数组 第一个参数 
+      
+      
+      
+      
+      
+      
+
+      
+      
 
 
 
@@ -120,9 +140,3 @@
 
 
 
-
-
-
-    </script>
-  </body>
-</html>
