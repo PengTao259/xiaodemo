@@ -103,7 +103,7 @@
       // console.log(newArr);
          
 
-      var arr=[1,2,3,4];
+      // var arr=[1,2,3,4];
       /**
        * 举几个数组简单的方法 
        */
@@ -124,6 +124,9 @@
       // console.log(arr);
 
       // 第五个简单的方法slice 截取数组 第一个参数 
+      
+      // console.log(6 && 10  && 7 && 8);
+      // console.log( 6 || 0 || 7 || 9);
       
       
       
