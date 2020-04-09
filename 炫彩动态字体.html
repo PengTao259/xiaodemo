@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>菜</title>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(41, 45, 62);
+}
+
+.container {
+  font-size: 120px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  fill: none;
+  stroke-width: 5;
+  stroke-dasharray: 0 240;
+  stroke-dashoffset: 0;
+}
+
+.text:nth-child(4n + 1){
+  stroke: rgb(39, 135, 238);
+  animation: text1 3s ease-in-out forwards infinite ;
+}
+
+.text:nth-child(4n + 2){
+  stroke: rgb(47, 168, 92);
+  stroke-dashoffset:  1060;
+  stroke-dasharray: 60 180;
+}
+
+.text:nth-child(4n + 3){
+  stroke: rgb(249, 189, 56);
+  stroke-dashoffset: 1120;
+  stroke-dasharray: 60 180;
+}
+
+.text:nth-child(4n + 4){
+  stroke: rgb(235, 61, 50 );
+  stroke-dashoffset: 1180;
+  stroke-dasharray: 60 180;
+}
+.text:nth-child(4n + 5){
+  stroke: rgb(250, 160, 30 );
+  stroke-dashoffset: 1240;
+  stroke-dasharray: 60 180;
+}
+.text:nth-child(4n + 6){
+  stroke: rgb(100, 200, 20 );
+  stroke-dashoffset: 1300;
+  stroke-dasharray: 60 180;
+}
+
+.text:nth-child(4n + 7){
+  stroke: rgb(100, 30, 60 );
+  stroke-dashoffset: 1360;
+  stroke-dasharray: 60 180;
+}
+
+
+@keyframes text1 {
+  100% {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 60 180;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <svg viewBox="0 0 1000 300">
+      <symbol id="Line-text">
+        <text text-anchor="middle" x="50%" y="50%" dy=".4em"> 
+          同桌你可真菜!
+        </text>
+      </symbol>
+      <use xLink:href="#Line-text" class="text"></use>
+      <use xLink:href="#Line-text" class="text"></use>
+      <use xLink:href="#Line-text" class="text"></use>
+      <use xLink:href="#Line-text" class="text"></use>
+    </svg>
+  </div>
+</body>
+</html>

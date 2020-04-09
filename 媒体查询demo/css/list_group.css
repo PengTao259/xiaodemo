@@ -1,0 +1,20 @@
+.list_group li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.8rem;
+}
+.list_group li:last-child {
+  border-bottom: none;
+}
+.list_group li:first-child {
+  padding-top: 0 0;
+}
+.list_group li a {
+  color: #777;
+}
+.list_group li span {
+  font-size: 0.5rem;
+  color: #888;
+}
