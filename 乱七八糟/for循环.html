@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [11, 21, 2, 11, 15, 16, 15, 12, 21, 11];
+    var newArr = []
+    for (let i = arr.length-1 ; i >= 0; i--) {
+      if(newArr.indexOf(arr[i]) === -1){
+        newArr.push(arr[i])
+      }
+    }
+    console.log(newArr);
+    
+
+  </script>
+</body>
+
+</html>

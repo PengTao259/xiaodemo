@@ -32,7 +32,7 @@
       minute = minute < 10 ? '0' + minute : minute
       second = second < 10 ? '0' + second : second
       var x = '日一二三四五六'.charAt(date.getDay())
-      var time = `现在是:${year}年${month}月${day}日 ${hour}:${minute}:${second} 星期${x}`
+      var time = `现在是:${year}年${month}月${day}日 ${hour}:$·{minute}:${second} 星期${x}`
      
     str.innerHTML = time
     }

@@ -11,16 +11,10 @@
             position: absolute;
             z-index: 1;
         }
-        .picBox {
-            position: absolute;
-            height: 359px;
-            width: 280px;
-            border: 1px solid #000;
-        }
         img{
-            max-width: 80px;
-            max-height: 60px;
-            margin: 10px;
+            position: absolute;
+            width: 280px;
+            height: 359px;
         }
 
     </style>
@@ -29,13 +23,7 @@
 <body>
 <div class="big">
     <canvas id="mycan" class="mycan" width="280" height="359">canvas标签支持IE9以上浏览器</canvas>
-    <div class="picBox">
-        <div class="pic1">
-            <img src="img/gpic3.jpg">
-        </div>
-        <img src="./img/gpic2.jpg">
-        <img src="./img/gpic.jpg">
-    </div>
+    <img src="img/gpic3.jpg">
 </div>
 
 <script>
@@ -58,24 +46,20 @@
         ctx.lineTo(event.offsetX,event.offsetY);
         ctx.stroke();
     }
-    mouseHander();
-    // 鼠标事件
-    function mouseHander() {  
-        //鼠标按下
-        cvs.addEventListener("mousedown",function () {
-            ctx.beginPath();
-            ctx.moveTo(event.offsetX,event.offsetY);
-            cvs.addEventListener("mousemove",move)
-        });
-        // 鼠标移动
-        cvs.addEventListener("mouseleave",function () {
-            cvs.removeEventListener("mousemove",move);
-        });
-        // 鼠标离开
-        cvs.addEventListener("mouseup",function () {
-            cvs.removeEventListener("mousemove",move);
-        });
-    }
+    //鼠标按下
+    cvs.addEventListener("mousedown",function () {
+        ctx.beginPath();
+        ctx.moveTo(event.offsetX,event.offsetY);
+        cvs.addEventListener("mousemove",move)
+    });
+    // 鼠标移动
+    cvs.addEventListener("mouseleave",function () {
+        cvs,removeEventListener("mousemove",move);
+    });
+    // 鼠标离开
+    cvs.addEventListener("mouseup",function () {
+        cvs,removeEventListener("mousemove",move);
+    });
 
 }
 </script>
