@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arrs = [{name:'小明',age:1},{name:'小共',age:2},{name:'小我',age:3},{name:'小a',age:2}]
+        var newArr = []
+        for (let i = 0; i < arrs.length; i++) {
+            for (let j = i+1; j < arrs.length; j++) {
+                if (arrs[i].age === arrs[j].age) {
+                    newArr.push(arrs[j])
+                }
+            }
+        }
+        console.log(arrs,newArr)
+  </script>
+</body>
+</html>

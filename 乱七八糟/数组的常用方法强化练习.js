@@ -101,9 +101,42 @@
       // console.log(todo);
       // const newArr = arr.splice(todo,1);
       // console.log(newArr);
-         
 
-      var arr=[1,2,3,4];
+      	/*数组中，取出满足要求的第一个值*/
+    const myArr=[1,2,3,4,8,12];
+    var v1=myArr.find(value=>value>8);
+    console.log(v1);
+ 
+    /*通过数组下标取对应值*/
+    var v2=myArr.find((value,index,arr)=>{
+        return index==4
+    });
+    console.log(v2);
+ 
+    /*对象，取出满足要求的下标*/
+    const nameArr=[
+        {id:1,userName:"zhaoqian",age:27},
+        {id:2,userName:"sunli",age:23},
+        {id:3,userName:"zhouwu",age:25 },
+        {id:4,userName:"zhengwang",age:21}];
+    /*满足条件，返回下标位置2*/
+    var i1=nameArr.findIndex((value)=>value.age==25);
+    console.log(i1);
+    /*没有满足条件的，返回-1*/
+    var i2=nameArr.findIndex((value)=>value.age==28);
+    console.log(i2);
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      // var arr=[1,2,3,4];
       /**
        * 举几个数组简单的方法 
        */
