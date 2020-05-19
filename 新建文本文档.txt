@@ -1,0 +1,69 @@
+{
+    "editor.detectIndentation": false,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "files.autoSave": "onFocusChange",
+    "以上为个人添加": 66666666666666666666666666666666666666666666666666666,
+    "files.associations": {
+        "*.wpy": "vue"
+    },
+    "eslint.enable": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.run": "onType",
+    "eslint.options": {
+        "extensions": [".js", ".vue"]
+    },
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "html",
+      {
+        
+         "language": "vue",
+         "autoFix": true
+     },
+      {
+          "language": "typescript",
+          "autoFix": true
+      },
+      "typescriptreact"
+  ],
+    "window.zoomLevel": 0,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    // 垂直标尺表示长度设置
+    "editor.rulers": [120],
+    // vscode启动后占用cup100%的解决
+    "search.followSymlinks": false,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\cmd.exe",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.renameOnType": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.colorTheme": "Snazzy Operator",
+    "editor.fontWeight": "500",
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "prettier.tabWidth": 4,
+    "editor.tabSize": 2 // 控制是否在搜索中跟踪符号链接
+}
